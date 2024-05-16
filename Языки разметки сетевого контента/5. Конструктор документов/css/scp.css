@@ -1,0 +1,31 @@
+.scp {
+    display: flex;
+    flex-direction: column;
+}
+
+    .scp__image {
+        width: 100%;
+        height: auto;
+        border-radius: 0.3rem;
+    }
+
+        .scp__image-caption {
+            display: block;
+            font-size: 0.8rem;
+            color: gray;
+            font-style: italic;
+            margin-bottom: 2rem;
+        }
+
+    .scp__interview {
+        background-color: #f2f3f4;
+        border: 2px dashed var(--gray);
+        border-radius: 0.5rem;
+        padding: 0.2rem 1rem;
+        margin: 2rem;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    .scp__list li {
+        margin-bottom: 0.5rem;
+    }

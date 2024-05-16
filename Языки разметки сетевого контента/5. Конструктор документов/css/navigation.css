@@ -1,0 +1,36 @@
+.navigation {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 300px;
+    height: 100vh;
+    background-color: white;
+    overflow-y: auto;
+    box-shadow: 0 0 1rem #e2e3e455;
+    padding: 4rem 1rem;
+    padding-left: 1.5rem;
+}
+
+    .navigation__title {
+        font-size: 2rem;
+    }
+
+    .navigation__subtitle {
+        margin: 0.2rem 0;
+    }
+
+    .navigation__list {
+        display: flex;
+        flex-direction: column;
+    }
+
+        .navigation__item {
+            display: inline;
+            color: var(--text);
+            text-decoration: none;
+            margin: 0.3rem 0;
+        }
+
+            .navigation__item:hover {
+                color: var(--primary);
+            }
