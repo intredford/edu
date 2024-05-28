@@ -1,0 +1,23 @@
+# Markdown
+*.md linguist-vendored=false
+*.md linguist-generated=false
+*.md linguist-documentation=false
+*.md linguist-detectable=true
+
+# TXT
+*.txt linguist-vendored=false
+*.txt linguist-generated=false
+*.txt linguist-documentation=false
+*.txt linguist-detectable=true
+
+# Excel
+*.xlsx linguist-vendored=false
+*.xlsx linguist-generated=false
+*.xlsx linguist-documentation=false
+*.xlsx linguist-detectable=true
+
+# Documents
+*.docx linguist-vendored=false
+*.docx linguist-generated=false
+*.docx linguist-documentation=false
+*.docx linguist-detectable=true
