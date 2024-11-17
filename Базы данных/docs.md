@@ -3,6 +3,7 @@
 ## Таблицы
 
 Диаграмма:
+
 ![](https://file.dimius.ru/edu/db/schema.png)
 
 ### drugs
