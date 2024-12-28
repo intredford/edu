@@ -21,3 +21,7 @@
 *.docx linguist-generated=false
 *.docx linguist-documentation=false
 *.docx linguist-detectable=true
+
+# Recognize Word and Excel
+*.xlsx diff=zip
+*.docx diff=zip
