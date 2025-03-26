@@ -92,7 +92,7 @@ async function find(q) {
         const grid = document.createElement('div');
         grid.className = 'grid';
 
-        const header = [' ', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
+        const header = [' ', 'ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ'];
         const times = [
             '08:30–10:00',
             '10:10–11:40',
@@ -117,6 +117,9 @@ async function find(q) {
                 const dayOfWeek = h;
                 const formattedDate = formatDay(days[i - 1]);
                 cell.innerHTML = `<div>${dayOfWeek}</div><div class="date">${formattedDate}</div>`;
+                if (currentDayInCycle === days[i - 1]) {
+                    cell.classList.add('today');
+                }
             }
             grid.appendChild(cell);
         });
@@ -131,6 +134,10 @@ async function find(q) {
                 const cell = document.createElement('div');
                 cell.className = 'entry';
                 const entry = filtered.find(e => e.day === d && e.position === i + 1);
+
+				if (currentDayInCycle === d) {
+					cell.classList.add('today');
+				}
 
                 if (entry) {
                     const room = document.createElement('div');
@@ -192,26 +199,30 @@ async function find(q) {
                     }
                     .grid {
                         display: grid;
-                        grid-template-columns: 100px repeat(6, 130px);
-                    }
-                    .header {
-                        font-weight: bold;
+                        grid-template-columns: 75px repeat(6, 130px);
                     }
                     .date {
                         font-size: 0.8em;
                     }
-                    .time {
-                        padding: 8px;
-                        font-size: 1em;
-                        font-variant-numeric: tabular-nums;
-                    }
                     .grid > div {
-                        padding: 14px 10px;
+                        padding: 10px;
 						min-height: 62px;
+						outline: 1px solid #8888880f;
+						outline-offset: -0.5px;
+					}
+					.time {
+						font-size: 1em;
+						font-variant-numeric: tabular-nums;
+					}
+					.header {
+                        font-weight: bold;
                     }
                     .week-label {
-                        font-size: 1.2em;
+						margin-top: 1em;
                     }
+					.today {
+						background-color: #ffcb000d;
+					}
                 </style>
             </head>
             <body>
