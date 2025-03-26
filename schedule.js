@@ -1,6 +1,25 @@
 var entries = [];
 
-async function find(q) {
+document.body.insertAdjacentHTML(
+	'beforeend', 
+	`<button 
+		style="position: fixed;right: 25px;bottom: 10px;" 
+		title = "Расписание преподавателя"
+		onclick="find()"
+	>
+		👩‍🏫
+	</button>`
+);
+
+async function find() {
+
+	const q = prompt('Введите часть ФИО преподавателя').trim();
+
+	if (!q) {
+		alert('Ничего не найдено')
+		return
+	}
+
     const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 
     const get = async (id, total, current) => {
