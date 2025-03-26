@@ -14,7 +14,7 @@ async function find(q) {
             headers: {
                 Accept: 'application/json',
                 'Content-Type': 'application/json',
-				'X-XSRF-TOKEN': (await cookieStore.get('XSRF-TOKEN')).value 
+				'X-XSRF-TOKEN': Cookies.get('XSRF-TOKEN')
             },
             body: JSON.stringify({ stream_id: id }),
         });
