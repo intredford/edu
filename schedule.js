@@ -3,6 +3,7 @@ var entries = [];
 document.body.insertAdjacentHTML(
 	'beforeend', 
 	`<button 
+ 		class="btn btn-secondary"
 		style="position: fixed;right: 25px;bottom: 10px;" 
 		title = "Расписание преподавателя"
 		onclick="find()"
